@@ -44,6 +44,7 @@ import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
 
 function App() {
+  // Below line-nu-1
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
@@ -61,17 +62,20 @@ function App() {
       },
     });
 
+    // Below line-nu-2
     store.dispatch(loadUser());
 
     getStripeApiKey();
   }, []);
 
+  // Below line-nu-3
   window.addEventListener("contextmenu", (e) => e.preventDefault());
 
   return (
     <Router>
       <Header />
 
+      {/* // Below line-nu-4 */}
       {isAuthenticated && <UserOptions user={user} />}
 
       {stripeApiKey && (
