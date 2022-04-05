@@ -47,6 +47,11 @@ app.use("/api/v1", payment);
 //   // res.sendFile(path.resolve(__dirname, "../frontend/public/index.html"));
 // });
 
+app.use(express.static(path.join(__dirname, '../frontend/build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build'))
+})
+
 // Middleware for Errors
 app.use(errorMiddleware);
 
