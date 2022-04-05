@@ -39,7 +39,7 @@ export const getProduct =
       dispatch({ type: ALL_PRODUCT_REQUEST });
 
       // let link = `/?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&ratings[gte]=${ratings}`;
-      let link = "http://localhost:3001/";
+      let link = "http://localhost:4000/";
       // let link = `/?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[25000]}&ratings[gte]=${ratings}`;
 
       if (category) {

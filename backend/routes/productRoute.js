@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-// 05-04
-const userRoute = require("../controllers/productController");
-// router.get('/',userRoute.getAllProducts);
-
 const {
   getAllProducts,
   createProduct,

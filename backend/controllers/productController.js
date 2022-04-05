@@ -4,13 +4,6 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ApiFeatures = require("../utils/apifeatures");
 const cloudinary = require("cloudinary");
 
-// 05-04-changed.
-exports.userController=(req,res)=>{
-  res.json({
-      userList:["user changed 1","user changed 2"]
-  })
-}
-
 // Create Product -- Admin
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   let images = [];
