@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect,useState } from "react";
-import axios from "axios";
 
 import { CgMouse } from "react-icons/all";
 import "./Home.css";
